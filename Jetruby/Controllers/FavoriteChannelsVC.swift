@@ -18,6 +18,7 @@ class FavoriteChannelsVC: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "Favorite channels"
+        
     }
     
 

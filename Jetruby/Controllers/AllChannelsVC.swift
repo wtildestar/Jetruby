@@ -21,16 +21,23 @@ class AllChannelsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "All channels news"
         setupTabbar()
+        setupNavbar()
     }
     
     // MARK: - Methods
-    func setupTabbar() {
-        tabSeparationVC.updateTabBarItem(tab: 0, image: UIImage(systemName: "pencil"))
-        tabSeparationVC.updateTabBarItem(tab: 1, image: UIImage(systemName: "trash"))
+    private func setupTabbar() {
+        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "0")
+        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "1")
+        self.tabBarController?.tabBar.items?[0].title = "All News"
+        self.tabBarController?.tabBar.items?[1].title = "Favorites"
+        self.tabBarController?.tabBar.barTintColor = .systemGray6
     }
-
+    
+    private func setupNavbar() {
+        self.navigationItem.title = "All channels news"
+    }
+    
     /*
     // MARK: - Navigation
 

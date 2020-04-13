@@ -14,17 +14,17 @@ import UIKit
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = .systemGray2
-            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.backgroundColor = .systemGray6
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
             
-            UINavigationBar.appearance().tintColor = .white
+            UINavigationBar.appearance().tintColor = .black
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
         } else {
-            UINavigationBar.appearance().tintColor = .white
-            UINavigationBar.appearance().barTintColor = .systemGray2
+            UINavigationBar.appearance().tintColor = .black
+            UINavigationBar.appearance().barTintColor = .systemGray6
             UINavigationBar.appearance().isTranslucent = false
         }
 
