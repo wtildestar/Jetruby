@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension FavoriteChannelsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

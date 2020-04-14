@@ -11,7 +11,7 @@ import UIKit
 class AllChannelsVC: UIViewController {
     
     // MARK: - Properties
-    let reuseId = "AllChannelsCell"
+    
     let tabSeparationVC = TabSeparationVC()
 
     // MARK: - Outlets
@@ -21,8 +21,8 @@ class AllChannelsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "All channels news"
         setupTabbar()
-        setupNavbar()
     }
     
     // MARK: - Methods
@@ -31,11 +31,7 @@ class AllChannelsVC: UIViewController {
         self.tabBarController?.tabBar.items?[1].image = UIImage(named: "1")
         self.tabBarController?.tabBar.items?[0].title = "All News"
         self.tabBarController?.tabBar.items?[1].title = "Favorites"
-        self.tabBarController?.tabBar.barTintColor = .systemGray6
-    }
-    
-    private func setupNavbar() {
-        self.navigationItem.title = "All channels news"
+        self.tabBarController?.tabBar.barTintColor = .gray
     }
     
     /*

@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension AllChannelsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -15,8 +16,9 @@ extension AllChannelsVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: AllChannelsCell.reuseId) as! AllChannelsCell
         cell.textLabel?.text = "label first controller"
         return cell
     }
 }
+ 
